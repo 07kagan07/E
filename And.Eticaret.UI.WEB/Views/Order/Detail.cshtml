@@ -1,0 +1,70 @@
+﻿@model And.Eticaret.Core.Model1.Entity.Order
+@{
+    ViewBag.Title = "Sipariş Detayı";
+}
+
+<h2>@Model.ID Nolu Sipariş durumu : @Model.Status.Name2user</h2>
+<hr />
+<b>Sipariş Bilgileri</b>
+<table class="table">
+    <tr>
+        <th>Ürün</th>
+        <th>Adet</th>
+    </tr>
+
+    @foreach (var item in Model.OrderProducts)
+    {
+        <tr>
+            <td>@item.Product.Name</td>
+            <td>@item.Quantity</td>
+        </tr>
+    }
+
+</table>
+<hr />
+<table>
+
+    <tr>
+        <td>Ürünler Toplamı : </td>
+        <td>@Model.TotalProductPrice.ToString("##,## TL")</td>
+    </tr>
+    <tr>
+        <td>Vergiler : </td>
+        <td>
+            @if (Model.TotalTaxPrice == 0)
+            {
+                @Model.TotalTaxPrice.ToString("0 TL")
+            }
+            else
+            {
+                @Model.TotalTaxPrice.ToString("#,## TL")
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>İndirim Toplamı : </td>
+        <td>
+            @if (Model.TotalTaxPrice == 0)
+            {
+                @Model.TotalDiscount.ToString("0 TL")
+            }
+            else
+            {
+                @Model.TotalDiscount.ToString("#,## TL")
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Toplam : </td>
+        <td>@Model.TotalPrice.ToString("##,## TL")</td>
+    </tr>
+</table>
+<br />
+@{
+    if (Model.StatusID == 1)
+    {
+        <a href="/Order/Pay?id=@Model.ID" class="btn btn-success">Kapıda Ödeme İle Onayla</a>
+    }
+}
+
+

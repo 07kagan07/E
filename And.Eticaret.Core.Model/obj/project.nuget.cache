@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "PTHC1T7GKbgNpJq80UO4c2hSGnJfh7La8K6afOooSAfg8ywLORLD8FeRbmP2XUjDv9cCiqI9PlcdHb5EwkQUxA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kagan\\source\\repos\\And.Eticaret\\And.Eticaret.Core.Model\\And.Eticaret.Core.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kagan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\kagan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\kagan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

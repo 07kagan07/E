@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<style>
+    .left {
+        width: 220px;
+        float: left;
+    }
+
+    .right {
+        width: 120px;
+        float: right;
+    }
+
+    .center {
+        float: initial;
+    }
+</style>
+@{ if (ViewBag.Error != null || ViewBag.ban != null)
+    {
+    <div class="alert-danger alert">
+        @ViewBag.Error
+        @ViewBag.ban
+    </div>
+    }
+
+}
+<br />
+<form action="/uyegiris" method="post">
+    <div class="row">
+        <div class="left">
+            @Html.Label("E-Posta Adresiniz: ")
+        </div>
+
+        @Html.TextBox("Email")
+
+    </div>
+    <br />
+    <div class="row">
+        <div class="left">
+            @Html.Label("Şifre: ")
+        </div>
+        @Html.Password("Password")
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary " style="width:150px">Giriş Yap</button>
+    <br />
+</form>
+<a style="color:darkslateblue; margin-left:50px;" href="/uyekayit">Üye Ol</a>

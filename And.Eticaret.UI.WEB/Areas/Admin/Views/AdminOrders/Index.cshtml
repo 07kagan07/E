@@ -1,0 +1,87 @@
+﻿@model IEnumerable<And.Eticaret.Core.Model1.Entity.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Yeni</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            DURUM
+        </th>
+        <th>
+            İSİM
+        </th>
+        <th>
+            ADRES
+        </th>
+        @*
+            <th>
+                @Html.DisplayNameFor(model => model.OrderProducts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalTaxPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalDiscount)
+            </th>*@
+        <th>
+            ÜCRET
+        </th>
+        <th>
+            SAATİ
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserAdress.Adress)
+            </td>
+            @*
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderProducts)
+                </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalTaxPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalDiscount)
+                    </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDate)
+            </td>
+
+            <td>
+                @Html.ActionLink("Onayla", "onayla", new { id = item.ID }) |
+                @Html.ActionLink("Detay", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Reddet", "reddet", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+@Html.Action("onayli", "AdminOrders")
+<br />
+@Html.Action("yolda", "AdminOrders")
+<br />
+@Html.Action("tamamlanan", "AdminOrders")
+<br />
+@Html.Action("red", "AdminOrders")

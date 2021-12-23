@@ -1,0 +1,12 @@
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\bin\Release\And.Eticaret.Core.Model1.dll.config
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\bin\Release\And.Eticaret.Core.Model1.dll
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\bin\Release\And.Eticaret.Core.Model1.pdb
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\bin\Release\EntityFramework.dll
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\bin\Release\EntityFramework.xml
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\obj\Release\And.Eticaret.Core.Model1.csprojAssemblyReference.cache
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\obj\Release\And.Eticaret.Core.Model1.csproj.CoreCompileInputs.cache
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\obj\Release\And.Eticaret.Core.Model1.csproj.CopyComplete
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\obj\Release\And.Eticaret.Core.Model1.dll
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model1\obj\Release\And.Eticaret.Core.Model1.pdb

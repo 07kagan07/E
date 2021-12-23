@@ -1,0 +1,49 @@
+﻿@model List<And.Eticaret.Core.Model1.Entity.Product>
+@{
+    ViewBag.Title = ViewBag.ktgr;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var kategori=(And.Eticaret.Core.Model1.Entity.Category)ViewBag.ktgr;
+}
+
+
+<div class="navbar-collapse "></div>
+<br />
+<br />
+<div>
+    <div class="col-md-3 col-sm-12" >
+        @{
+            if (Session["LoginUser"] == null)
+            {
+                @Html.Action("Login", "Home")
+            }
+            else
+            {
+                @Html.Action("Sepet", "Basket")
+            }
+        }
+    </div>
+    <div class="col-md-9 col-sm-12" >
+        <div class="page-header">@kategori.Name</div>
+        @foreach (var item2 in Model)
+        {
+            <div class="row" >
+                <hr />
+                <div class="col-md-1" style="float:left;">
+                    <a href="/urun/@item2.Name.Replace(" ","-")/@item2.ID" class="btn btn-success">+</a>
+                </div>
+                <div class="col-md-5">
+                    @item2.Name
+
+                </div>
+                <div class="col-md-3">@item2.Description</div>
+                <div class="col-md-3 right">
+                    @item2.Price TL
+                </div>
+
+            </div>
+
+        }
+    </div>
+</div> 
+    <br />
+

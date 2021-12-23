@@ -1,0 +1,8 @@
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\bin\Debug\netstandard2.0\And.Eticaret.Core.Model.deps.json
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\bin\Debug\netstandard2.0\And.Eticaret.Core.Model.dll
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\obj\Debug\netstandard2.0\And.Eticaret.Core.Model.csprojAssemblyReference.cache
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\obj\Debug\netstandard2.0\And.Eticaret.Core.Model.AssemblyInfoInputs.cache
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\obj\Debug\netstandard2.0\And.Eticaret.Core.Model.AssemblyInfo.cs
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\bin\Debug\netstandard2.0\And.Eticaret.Core.Model.pdb
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\obj\Debug\netstandard2.0\And.Eticaret.Core.Model.dll
+C:\Users\kagan\source\repos\And.Eticaret\And.Eticaret.Core.Model\obj\Debug\netstandard2.0\And.Eticaret.Core.Model.pdb

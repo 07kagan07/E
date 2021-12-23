@@ -1,0 +1,110 @@
+﻿@model List<And.Eticaret.Core.Model1.Entity.Product>
+@{
+    ViewBag.Title = "Anasayfa";
+    
+}
+
+
+<div class="navbar-collapse "></div>
+<br />
+<br />
+<div>
+    <div class="col-md-3 col-sm-12" @*style="float:left;"*@>
+        @{
+            if (Session["LoginUser"] == null)
+            {
+                @Html.Action("Login", "Home")
+
+            }
+            else
+            {
+                @Html.Action("Sepet", "Basket")
+            }
+        }
+
+    </div>
+    <div class="col-md-9 col-sm-12" @*style="float:left;"*@>
+
+        @foreach (var item2 in Model)
+        {
+            <div class="row">
+                <hr />
+                    @if (ViewBag.IsLogin)
+                    {
+                        <div class="col-md-1" style="float:left;">
+                            <a href="/urun/@item2.Name.Replace(" ","-")/@item2.ID" class="btn btn-success ">+</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-1" style="float:left;">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                                +
+                            </button>
+                        </div>
+                    }
+
+                <div class="col-md-5">
+                    @item2.Name
+
+                </div>
+                <div class="col-md-3">@item2.Description</div>
+                <div class="col-md-3 right">
+                    @item2.Price TL
+                </div>
+
+            </div>
+
+        }
+    </div>
+</div> 
+    <br />
+    
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Giriş Yapınız</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align:center;">
+                    <h4> Sipariş Vermek İçin Giriş Yapınız veya Üye Olunuz</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="/uyekayit" class="btn btn-primary">Üye Ol</a>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Kapat</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="modal" id="modaldialog"> Sepete Eklendi  </div>*@
+   
+
+@*@section script{
+    <script type="text/javascript">
+       
+
+          $(function ()
+        {
+            $("#addbasket").on("click", function ()
+            {
+                
+                var pid = $(this).atty("data-pID");
+                $.post("/Basket/AddProduct?productID="+ pid +"&quantity=1", function (data) {
+
+                });
+                return false;
+            });
+
+        });
+       
+
+    </script>
+    
+    
+    }*@

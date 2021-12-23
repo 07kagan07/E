@@ -1,0 +1,43 @@
+﻿@model IEnumerable<And.Eticaret.Core.Model1.Entity.Basket>
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css" type="text/css">
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<h2>Sepetiniz @ViewBag.bos</h2>
+<table class="table">
+    @*<tr>
+            <th>
+
+            </th>
+
+            <th>
+
+            </th>
+
+            <th></th>
+        </tr>*@
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+
+            <td>
+                x @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+
+            <td>
+                @Html.ActionLink("Sil ", "Delete", new { id = item.ID })
+            </td>
+
+        </tr>
+    }
+
+</table>
+@*<h3 style="text-align:center">@ViewBag.bos</h3>*@
+@if (ViewBag.bos == null)
+{
+    <a href="/siparisver" class="btn btn-default" style="float:right; margin-bottom:10px;"> <i class="fa fa-rocket" aria-hidden="true"></i> Sepeti Onayla</a>
+}
+

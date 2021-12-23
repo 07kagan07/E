@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SahilKent Pide&Kebap</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .navbar-brand {
+            color: darkslateblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar @*navbar-inverse*@ navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header" style="color:darkslateblue; background-color:white;">
+                <button type="button" class="navbar-toggle bg-info" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("SahilKent Pide&Kebap", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+            </div>
+            <div class="navbar-collapse collapse " style="float:left; color:darkslateblue ">
+                <ul class="nav navbar-nav">
+                    @Html.Action("GetMenu", "Home")
+                </ul>
+            </div>
+            <div style="float:right; color:darkslateblue;margin-top:15px; ">
+                @{
+                    if (Session["LoginUser"] == null)
+                    {
+                        @*<a style="color:darkslateblue" href="/uyegiris">Giriş Yap &#124;</a>*@
+                        <a style="color:darkslateblue" href="/uyekayit">Üye Ol</a>
+                    }
+                    else
+                    {
+                        var usr = Session["LoginUser"] as And.Eticaret.Core.Model1.Entity.User;
+                        //üye Giriş Yapmış
+                        <p>
+                            @usr.Name @usr.LastName <br />
+                            <a href="#">Profilim &#124;</a>
+                            <a href="#">Siparişlerim &#124;</a>
+                            <a href="/sepetim">Sepetim</a>
+                        </p>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>
+            <div class="col-md-12">
+                <hr />
+                <p style="float:right">&copy; @DateTime.Now.Year - SahilKent Pide&Kebap</p>
+            </div>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>*@
+    @RenderSection("script", false)
+</body>
+</html>
